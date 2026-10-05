@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio de Personal Médico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-top">
+      <a href="index.html" class="logo">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    <path d="M12 7v6"/>
+    <path d="M9 10h6"/>
+  </svg>
+  <span>MediCare</span>
+</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="doctores.html" style="color: var(--color-primary-hover);">¿Eres Médico?</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" placeholder="Busca por nombre de médico o especialidad...">
+        <i data-lucide="search"></i>
+      </div>
+      <div class="header-actions">
+        <a href="doctores.html" class="btn btn-primary"><i data-lucide="calendar"></i> Reserva Cita Ahora</a>
+        <a href="login.html" class="btn btn-secondary"><i data-lucide="user"></i> Mi Cuenta</a>
+      </div>
+    </div>
+  </header>
+
+  <div style="background-color: var(--color-bg-alt); padding: 15px 0;">
+    <div class="container">
+      <small style="color: var(--color-text-muted);"><a href="index.html">Inicio</a> &gt; Personal Médico</small>
+      <h1 style="font-size: 2rem; margin-top: 5px;">Nuestro Equipo Médico</h1>
+    </div>
+  </div>
+
+  <section class="section-padding">
+    <div class="container">
+      <!-- BARRA DE FILTROS -->
+      <div style="display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;">
+        <input type="text" id="filter-name" placeholder="Busca por nombre de médico" style="flex: 1; min-width: 200px; padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);">
+        
+        <select id="filter-spec" style="padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);">
+          <option value="">Selecciona Especialidad</option>
+          <option value="Cardiología">Cardiología</option>
+          <option value="Pediatría">Pediatría</option>
+          <option value="Cirugía">Cirugía Tórax y Cardiovascular</option>
+        </select>
+
+        <select id="filter-unit" style="padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);">
+          <option value="">Unidad de Especialidad</option>
+          <option value="unidad-1">Sede Central</option>
+          <option value="unidad-2">Sede Norte</option>
+        </select>
+      </div>
+
+      <!-- REJILLA DE DOCTORES -->
+      <div class="grid-4" id="doctors-list">
+        <div class="card" data-name="Carlos Mendoza" data-spec="Cardiología">
+          <div class="card-img"></div>
+          <h3>Dr. Carlos Mendoza</h3>
+          <p style="color: var(--color-text-muted);">Cardiología</p>
+          <a href="perfil-doctor.html" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">Ver perfil</a>
+        </div>
+
+        <div class="card" data-name="Ana Torres" data-spec="Pediatría">
+          <div class="card-img"></div>
+          <h3>Dra. Ana Torres</h3>
+          <p style="color: var(--color-text-muted);">Pediatría</p>
+          <a href="perfil-doctor.html" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">Ver perfil</a>
+        </div>
+
+        <div class="card" data-name="Mario Ramírez" data-spec="Cirugía">
+          <div class="card-img"></div>
+          <h3>Dr. Mario Ramírez</h3>
+          <p style="color: var(--color-text-muted);">Cirugía Tórax y Cardiovascular</p>
+          <a href="perfil-doctor.html" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">Ver perfil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER CITA RÁPIDA -->
+  <section class="section-padding" style="background-color: var(--color-primary-light);">
+    <div class="container banner-content">
+      <div>
+        <h2>Programa tu cita médica con nosotros</h2>
+        <p style="margin-top: 10px;">Accede fácilmente a nuestros servicios y coordina tu atención de manera rápida y segura.</p>
+      </div>
+      <a href="login.html" class="btn btn-primary">Agenda tu Cita</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container"><p>&copy; 2026 WebApp de Salud. Todos los derechos reservados.</p></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

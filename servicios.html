@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Médicos | Nuestra Oferta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="header">
+    <div class="container header-top">
+      <a href="index.html" class="logo">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    <path d="M12 7v6"/>
+    <path d="M9 10h6"/>
+  </svg>
+  <span>MediCare</span>
+</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="servicios.html" class="active" style="color: var(--color-primary-hover);">Servicios</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="doctores.html">¿Eres Médico?</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" placeholder="Busca por nombre de médico o especialidad...">
+        <i data-lucide="search"></i>
+      </div>
+      <div class="header-actions">
+        <a href="doctores.html" class="btn btn-primary"><i data-lucide="calendar"></i> Reserva Cita Ahora</a>
+        <a href="login.html" class="btn btn-secondary"><i data-lucide="user"></i> Mi Cuenta</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SERVICIOS: CIRUGÍA ROBÓTICA DA VINCI -->
+  <section class="section-padding" style="background-color: var(--color-bg-alt);">
+    <div class="container grid-3" style="align-items: center;">
+      <div style="grid-column: span 2;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 15px;">Precisión e innovación: Cirugía Robótica Da Vinci</h1>
+        <p style="color: var(--color-text-muted); margin-bottom: 15px;">
+          Evolucionamos para cuidar mejor a nuestros pacientes con cirugía robótica Da Vinci, una tecnología que potencia la precisión y seguridad en procedimientos mínimamente invasivos.
+        </p>
+        <p style="color: var(--color-text-muted); margin-bottom: 25px;">
+          Somos pioneros en cirugía robótica pediátrica, reafirmando nuestro compromiso con una medicina innovadora, humana y centrada en el paciente.
+        </p>
+        <a href="doctores.html" class="btn btn-primary">Agendar Cita</a>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=600&q=80" alt="Cirugía Robótica" style="width: 100%; border-radius: var(--radius-md); object-fit: cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ¿POR QUÉ ELEGIRNOS? -->
+  <section class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Atención médica integral, personalizada y humana</h2>
+      <p class="section-subtitle">Todo lo que necesitas para tu cuidado médico, con especialistas expertos y diagnóstico preciso.</p>
+      
+      <div class="grid-3">
+        <div class="card">
+          <i data-lucide="award" style="width: 40px; height: 40px; color: var(--color-primary-hover); margin-bottom: 10px;"></i>
+          <h3>Médicos especialistas de primer nivel</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 10px;">
+            Contamos con un equipo ampliamente certificado para asegurar diagnósticos acertados y tratamientos efectivos.
+          </p>
+        </div>
+        <div class="card">
+          <i data-lucide="activity" style="width: 40px; height: 40px; color: var(--color-primary-hover); margin-bottom: 10px;"></i>
+          <h3>Diagnóstico preciso y rápido</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 10px;">
+            Equipamiento tecnológico de última generación para entregarte resultados confiables en el menor tiempo.
+          </p>
+        </div>
+        <div class="card">
+          <i data-lucide="heart-handshake" style="width: 40px; height: 40px; color: var(--color-primary-hover); margin-bottom: 10px;"></i>
+          <h3>Atención humana</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 10px;">
+            Acompañamiento cercano y empático durante todo tu proceso médico y de consulta externa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section-padding" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      <h2 class="section-title">Pacientes que confiaron en nosotros</h2>
+      <p class="section-subtitle">Tu salud merece lo mejor</p>
+      
+      <div class="grid-4">
+        <div class="card" style="text-align: left;">
+          <p style="font-style: italic; font-size: 0.85rem; margin-bottom: 15px;">"Fue una experiencia muy positiva. El equipo de cardiología fue muy profesional y atento."</p>
+          <strong style="display: block;">María José G.</strong>
+          <small style="color: var(--color-text-muted);">Cardiología</small>
+        </div>
+        <div class="card" style="text-align: left;">
+          <p style="font-style: italic; font-size: 0.85rem; margin-bottom: 15px;">"Excelente atención del personal. El Dr. Hernández fue muy claro y detallado."</p>
+          <strong style="display: block;">Carlos Andrés M.</strong>
+          <small style="color: var(--color-text-muted);">Cirugía General</small>
+        </div>
+        <div class="card" style="text-align: left;">
+          <p style="font-style: italic; font-size: 0.85rem; margin-bottom: 15px;">"Las instalaciones están muy limpias y modernas. Me sentí muy segura en todo momento."</p>
+          <strong style="display: block;">Alejandra S.</strong>
+          <small style="color: var(--color-text-muted);">Dermatología</small>
+        </div>
+        <div class="card" style="text-align: left;">
+          <p style="font-style: italic; font-size: 0.85rem; margin-bottom: 15px;">"Después del tratamiento me siento mucho mejor. Recomendadísimo desde el primer día."</p>
+          <strong style="display: block;">Roberto F.</strong>
+          <small style="color: var(--color-text-muted);">Traumatología</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER LIBRO DE FELICITACIONES -->
+  <section class="banner-experience">
+    <div class="container banner-content">
+      <div>
+        <h3>¿Tuviste una buena experiencia?</h3>
+        <p>Comparte tu historia en nuestro Libro de Felicitaciones y ayuda a otros pacientes.</p>
+      </div>
+      <button class="btn btn-secondary" onclick="openFeedbackModal()">Deja tu felicitación</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container"><p>&copy; 2026 WebApp de Salud. Todos los derechos reservados.</p></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

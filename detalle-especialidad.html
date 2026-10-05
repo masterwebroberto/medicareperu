@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cirugía Tórax y Cardiovascular | Detalle de Especialidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-top">
+      <a href="index.html" class="logo">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    <path d="M12 7v6"/>
+    <path d="M9 10h6"/>
+  </svg>
+  <span>MediCare</span>
+</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="especialidades.html" style="color: var(--color-primary-hover);">Especialidades</a></li>
+          <li><a href="doctores.html">¿Eres Médico?</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" placeholder="Busca por nombre de médico o especialidad...">
+        <i data-lucide="search"></i>
+      </div>
+      <div class="header-actions">
+        <a href="doctores.html" class="btn btn-primary"><i data-lucide="calendar"></i> Reserva Cita Ahora</a>
+        <a href="login.html" class="btn btn-secondary"><i data-lucide="user"></i> Mi Cuenta</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS -->
+  <div style="background-color: var(--color-bg-alt); padding: 15px 0;">
+    <div class="container">
+      <small style="color: var(--color-text-muted);"><a href="index.html">Inicio</a> &gt; <a href="especialidades.html">Especialidades</a> &gt; Cirugía Tórax y Cardiovascular</small>
+      <h1 style="font-size: 2rem; margin-top: 5px;">Cirugía Tórax Y Cardiovascular</h1>
+    </div>
+  </div>
+
+  <!-- RESUMEN PRINCIPAL -->
+  <section class="section-padding">
+    <div class="container grid-3" style="align-items: center;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Especialidad" style="width: 100%; border-radius: var(--radius-md);">
+      </div>
+      <div style="grid-column: span 2;">
+        <h2>Cirugía Tórax Y Cardiovascular</h2>
+        <p style="color: var(--color-text-muted); margin: 15px 0;">
+          La especialidad de Cirugía Torácica y Cardiovascular comprende el diagnóstico y tratamiento quirúrgico de afecciones en pulmones, pared torácica y la estructura cardíaca y vascular.
+        </p>
+        <p style="color: var(--color-text-muted); margin-bottom: 20px;">
+          Contamos con tecnología de vanguardia y quirófanos inteligentes para brindarte la máxima seguridad.
+        </p>
+        <a href="doctores.html" class="btn btn-primary">Agenda tu Cita</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARACTERÍSTICAS / CADA DETALLE IMPORTA -->
+  <section class="section-padding" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      <h2 class="section-title">Cada Detalle Importa</h2>
+      <p class="section-subtitle">Conoce los fundamentos de nuestro estudio clínico</p>
+      
+      <div class="grid-3">
+        <div class="card">
+          <h3>Tecnología de Punta</h3>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 10px;">Monitorización avanzada e instrumental de alta precisión.</p>
+        </div>
+        <div class="card">
+          <h3>Recuperación Acelerada</h3>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 10px;">Protocolos postoperatorios optimizados para la comodidad del paciente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIALISTAS DE LA ÁREA -->
+  <section class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Nuestros Mejores Especialistas A Tu Disposición</h2>
+      <p class="section-subtitle">Confía tu salud a un equipo altamente calificado</p>
+      
+      <div class="grid-4">
+        <div class="card">
+          <div class="card-img"></div>
+          <div class="rating"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+          <h3>Dr. Mario Ramírez</h3>
+          <p style="color: var(--color-text-muted);">Cirujano Torácico</p>
+          <a href="perfil-doctor.html" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">Ver Perfil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container"><p>&copy; 2026 WebApp de Salud. Todos los derechos reservados.</p></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

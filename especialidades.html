@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especialidades Médicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-top">
+      <a href="index.html" class="logo">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    <path d="M12 7v6"/>
+    <path d="M9 10h6"/>
+  </svg>
+  <span>MediCare</span>
+</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="especialidades.html" style="color: var(--color-primary-hover);">Especialidades</a></li>
+          <li><a href="doctores.html">¿Eres Médico?</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" placeholder="Busca por nombre de médico o especialidad...">
+        <i data-lucide="search"></i>
+      </div>
+      <div class="header-actions">
+        <a href="doctores.html" class="btn btn-primary"><i data-lucide="calendar"></i> Reserva Cita Ahora</a>
+        <a href="login.html" class="btn btn-secondary"><i data-lucide="user"></i> Mi Cuenta</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & TÍTULO -->
+  <div style="background-color: var(--color-bg-alt); padding: 20px 0;">
+    <div class="container">
+      <small style="color: var(--color-text-muted);"><a href="index.html">Inicio</a> &gt; Especialidades</small>
+      <h1 style="font-size: 2rem; margin-top: 5px;">Especialidades Médicas</h1>
+    </div>
+  </div>
+
+  <!-- FILTROS Y GRID DE ESPECIALIDADES -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Buscador de Especialidades -->
+      <div style="display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;">
+        <div class="header-search" style="flex: 1; min-width: 250px;">
+          <input type="text" id="input-search-spec" placeholder="Busca por nombre de especialidad...">
+          <i data-lucide="search"></i>
+        </div>
+        <select style="padding: 10px 15px; border-radius: var(--radius-sm); border: 1px solid var(--color-border); outline: none;">
+          <option value="">Todas las Unidades Médicas</option>
+          <option value="cardiologia">Unidad Cardiovascular</option>
+          <option value="pediatria">Unidad Pediátrica</option>
+          <option value="quirurgica">Unidad Quirúrgica</option>
+        </select>
+      </div>
+
+      <!-- Tarjetas de Especialidades -->
+      <div class="grid-3" id="specialties-grid">
+        <!-- Card 1 -->
+        <div class="card" style="text-align: left; display: flex; gap: 15px;">
+          <div style="width: 100px; height: 100px; background-color: var(--color-bg-alt); border-radius: var(--radius-sm); flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="heart-pulse" style="width: 40px; height: 40px; color: var(--color-primary-hover);"></i>
+          </div>
+          <div>
+            <h3>Cardiología</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 5px 0;">Diagnóstico y tratamiento de afecciones cardíacas y vasculares.</p>
+            <a href="detalle-especialidad.html" style="color: var(--color-primary-hover); font-weight: 600; font-size: 0.85rem;">Ver especialidad &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" style="text-align: left; display: flex; gap: 15px;">
+          <div style="width: 100px; height: 100px; background-color: var(--color-bg-alt); border-radius: var(--radius-sm); flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="baby" style="width: 40px; height: 40px; color: var(--color-primary-hover);"></i>
+          </div>
+          <div>
+            <h3>Pediatría</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 5px 0;">Cuidado integral de la salud del recién nacido, niños y adolescentes.</p>
+            <a href="detalle-especialidad.html" style="color: var(--color-primary-hover); font-weight: 600; font-size: 0.85rem;">Ver especialidad &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" style="text-align: left; display: flex; gap: 15px;">
+          <div style="width: 100px; height: 100px; background-color: var(--color-bg-alt); border-radius: var(--radius-sm); flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="brain" style="width: 40px; height: 40px; color: var(--color-primary-hover);"></i>
+          </div>
+          <div>
+            <h3>Neurología</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 5px 0;">Tratamiento especializado de trastornos del sistema nervioso.</p>
+            <a href="detalle-especialidad.html" style="color: var(--color-primary-hover); font-weight: 600; font-size: 0.85rem;">Ver especialidad &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" style="text-align: left; display: flex; gap: 15px;">
+          <div style="width: 100px; height: 100px; background-color: var(--color-bg-alt); border-radius: var(--radius-sm); flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="sparkles" style="width: 40px; height: 40px; color: var(--color-primary-hover);"></i>
+          </div>
+          <div>
+            <h3>Dermatología</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 5px 0;">Prevención y tratamiento de enfermedades de la piel, cabello y uñas.</p>
+            <a href="detalle-especialidad.html" style="color: var(--color-primary-hover); font-weight: 600; font-size: 0.85rem;">Ver especialidad &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER ENCUENTRA A TU MÉDICO -->
+  <section class="section-padding" style="background-color: var(--color-bg-alt);">
+    <div class="container grid-3" style="align-items: center;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=80" alt="Doctor" style="width: 100%; border-radius: var(--radius-md);">
+      </div>
+      <div style="grid-column: span 2; background-color: var(--color-white); padding: 30px; border-radius: var(--radius-md);">
+        <h2>Encuentra a tu médico</h2>
+        <p style="color: var(--color-text-muted); margin-bottom: 20px;">Busca directamente por el nombre del profesional o la especialidad médica que requieres.</p>
+        <div style="display: flex; gap: 10px;">
+          <input type="text" placeholder="Busca por nombre de médico o especialidad" style="flex: 1; padding: 12px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);">
+          <a href="doctores.html" class="btn btn-primary"><i data-lucide="search"></i> Buscar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container"><p>&copy; 2026 WebApp de Salud. Todos los derechos reservados.</p></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
