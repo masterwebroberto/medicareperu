@@ -260,3 +260,20 @@ function closeFeedbackModal() {
       window.location.href = 'index.html';
     });
   }
+
+
+  // Detectar la ubicación del paciente desde el navegador móvil
+function obtenerUbicacion() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((posicion) => {
+      const lat = posicion.coords.latitude;
+      const lon = posicion.coords.longitude;
+      
+      // Muestra al usuario los médicos más cercanos según su latitud/longitud
+      document.getElementById("ubicacion-status").innerText = 
+        "📍 Buscando especialistas y clínicas cerca de ti...";
+    });
+  } else {
+    alert("Puedes seleccionar tu distrito manualmente en el buscador.");
+  }
+}
