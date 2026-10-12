@@ -20,31 +20,51 @@
 
   <!-- HEADER NAVEGACIÓN -->
   <header class="header">
-    <div class="container header-top">
-      <a href="index.html" class="logo">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-          <path d="M12 7v6"/>
-          <path d="M9 10h6"/>
-        </svg>
-        <span>MediCare</span>
-      </a>
-      
-      <nav>
-        <ul class="nav-links">
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="especialidades.html">Especialidades</a></li>
-          <li><a href="doctores.html">¿Eres Médico?</a></li>
-        </ul>
-      </nav>
+  <div class="container header-top">
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        <path d="M12 7v6"/>
+        <path d="M9 10h6"/>
+      </svg>
+      <span>MediCare</span>
+    </a>
 
-      <div class="header-actions">
-        <a href="index.html" class="btn btn-secondary">
-          <i data-lucide="arrow-left"></i> Volver al Inicio
-        </a>
-      </div>
+    <!-- BOTÓN DE MENÚ HAMBURGUESA PARA MÓVILES -->
+    <button class="mobile-menu-toggle" id="btn-toggle-menu" aria-label="Abrir Menú">
+      <i data-lucide="menu"></i>
+    </button>
+    
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav id="main-nav">
+      <ul class="nav-links">
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="doctores.html">¿Eres Médico?</a></li>
+        <li><a href="citas.html" style="color: var(--color-primary-hover); font-weight: 700;">Mis Citas</a></li>
+      </ul>
+    </nav>
+
+    <!-- FORMULARIO DE BÚSQUEDA COMPACTO -->
+    <form class="header-search-form" id="header-search-form">
+      <input type="text" id="header-search-input" placeholder="Busca por médico o especialidad...">
+      <button type="submit" aria-label="Buscar"><i data-lucide="search"></i></button>
+    </form>
+
+    <!-- ACCIONES / BOTONES LADO A LADO EN MÓVIL -->
+    <div class="header-actions">
+      <button class="btn btn-primary btn-header" id="btn-open-booking">
+        <i data-lucide="calendar"></i>
+        <span>Reserva Cita</span>
+      </button>
+      <a href="login.html" class="btn btn-secondary btn-header">
+        <i data-lucide="user"></i>
+        <span>Mi Cuenta</span>
+      </a>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- CONTENEDOR PRINCIPAL DE LOGIN Y REGISTRO -->
   <main style="padding: 40px 15px; display: flex; justify-content: center; align-items: center; flex: 1;">

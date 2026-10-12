@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plataforma Médica Tu Salud a Un Clic 2026</title>
+  <title>MediCare Perú | Tu Salud a Un Clic 2026</title>
   
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,45 +20,53 @@
 
   <!-- HEADER / NAVEGACIÓN PRINCIPAL -->
   <header class="header">
-    <div class="container header-top">
-      <a href="index.html" class="logo">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-          <path d="M12 7v6"/>
-          <path d="M9 10h6"/>
-        </svg>
-        <span>MediCare</span>
+  <div class="container header-top">
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        <path d="M12 7v6"/>
+        <path d="M9 10h6"/>
+      </svg>
+      <span>MediCare</span>
+    </a>
+
+    <!-- BOTÓN DE MENÚ HAMBURGUESA PARA MÓVILES -->
+    <button class="mobile-menu-toggle" id="btn-toggle-menu" aria-label="Abrir Menú">
+      <i data-lucide="menu"></i>
+    </button>
+    
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav id="main-nav">
+      <ul class="nav-links">
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="doctores.html">¿Eres Médico?</a></li>
+        <li><a href="citas.html" style="color: var(--color-primary-hover); font-weight: 700;">Mis Citas</a></li>
+      </ul>
+    </nav>
+
+    <!-- FORMULARIO DE BÚSQUEDA COMPACTO -->
+    <form class="header-search-form" id="header-search-form">
+      <input type="text" id="header-search-input" placeholder="Busca por médico o especialidad...">
+      <button type="submit" aria-label="Buscar"><i data-lucide="search"></i></button>
+    </form>
+
+    <!-- ACCIONES / BOTONES LADO A LADO EN MÓVIL -->
+    <div class="header-actions">
+      <button class="btn btn-primary btn-header" id="btn-open-booking">
+        <i data-lucide="calendar"></i>
+        <span>Reserva Cita</span>
+      </button>
+      <a href="login.html" class="btn btn-secondary btn-header">
+        <i data-lucide="user"></i>
+        <span>Mi Cuenta</span>
       </a>
-      
-      <nav>
-        <ul class="nav-links">
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="especialidades.html">Especialidades</a></li>
-          <li><a href="doctores.html">¿Eres Médico?</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-search-container">
-        <div class="header-search">
-          <input type="text" placeholder="Busca por nombre de médico o especialidad...">
-          <i data-lucide="search"></i>
-        </div>
-      </div>
-
-      <div class="header-actions">
-        <!-- BOTÓN DE RESERVA CORREGIDO CON ID -->
-        <button class="btn btn-primary" id="btn-open-booking">
-          <i data-lucide="calendar"></i> Reserva Cita Ahora
-        </button>
-        <a href="login.html" class="btn btn-secondary">
-          <i data-lucide="user"></i> Mi Cuenta
-        </a>
-      </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- HERO SECTION / BANNER SLIDER -->
-<!-- HERO SECTION / BANNER SLIDER (SOLO IMAGEN) -->
   <section class="section-padding" style="background-color: var(--color-bg-alt);">
     <div class="container grid-3" style="align-items: center;">
       <div>
@@ -71,7 +79,7 @@
         </button>
       </div>
 
-      <!-- CONTENEDOR DEL SLIDER DE IMÁGENES -->
+      <!-- SLIDER DE IMÁGENES -->
       <div style="grid-column: span 2; position: relative;">
         <div class="hero-slider">
           <div class="hero-slides">
@@ -84,17 +92,6 @@
             <div class="slide">
               <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Atención Médica 3">
             </div>
-          </div>
-
-          <!-- Botones de Navegación del Slider -->
-          <button type="button" class="slider-btn prev-slide" aria-label="Anterior">&#10094;</button>
-          <button type="button" class="slider-btn next-slide" aria-label="Siguiente">&#10095;</button>
-
-          <!-- Puntos Indicadores -->
-          <div class="slider-dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
           </div>
         </div>
       </div>
@@ -127,40 +124,89 @@
     </div>
   </section>
 
-  <!-- EQUIPO MÉDICO CALIFICADO -->
+  <!-- NUEVA SECCIÓN: ESPECIALIDADES MÁS UTILIZADAS -->
   <section class="section-padding" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      <h2 class="section-title"><i data-lucide="activity"></i> Especialidades Médicas Más Utilizadas</h2>
+      <p class="section-subtitle">Acceso directo a nuestras áreas clínicas principales</p>
+
+      <div class="grid-4" style="margin-top: 25px;">
+        <div class="card" style="text-align: left; display: flex; align-items: center; gap: 15px;">
+          <i data-lucide="heart-pulse" style="width: 36px; height: 36px; color: var(--color-primary-hover); flex-shrink: 0;"></i>
+          <div>
+            <h4>Cardiología</h4>
+            <a href="doctores.html?spec=Cardiología" style="color: var(--color-primary-hover); font-size: 0.85rem; font-weight: 600;">Ver especialistas &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card" style="text-align: left; display: flex; align-items: center; gap: 15px;">
+          <i data-lucide="baby" style="width: 36px; height: 36px; color: var(--color-primary-hover); flex-shrink: 0;"></i>
+          <div>
+            <h4>Pediatría</h4>
+            <a href="doctores.html?spec=Pediatría" style="color: var(--color-primary-hover); font-size: 0.85rem; font-weight: 600;">Ver especialistas &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card" style="text-align: left; display: flex; align-items: center; gap: 15px;">
+          <i data-lucide="brain" style="width: 36px; height: 36px; color: var(--color-primary-hover); flex-shrink: 0;"></i>
+          <div>
+            <h4>Neurología</h4>
+            <a href="doctores.html?spec=Neurología" style="color: var(--color-primary-hover); font-size: 0.85rem; font-weight: 600;">Ver especialistas &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card" style="text-align: left; display: flex; align-items: center; gap: 15px;">
+          <i data-lucide="sparkles" style="width: 36px; height: 36px; color: var(--color-primary-hover); flex-shrink: 0;"></i>
+          <div>
+            <h4>Dermatología</h4>
+            <a href="doctores.html?spec=Dermatología" style="color: var(--color-primary-hover); font-size: 0.85rem; font-weight: 600;">Ver especialistas &rarr;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 25px;">
+        <a href="especialidades.html" class="btn btn-secondary">Ver todas las especialidades</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO MÉDICO CALIFICADO -->
+  <section class="section-padding">
     <div class="container">
       <h2 class="section-title"><i data-lucide="stethoscope"></i> Nuestro Equipo Médico Calificado</h2>
       <p class="section-subtitle">Profesionales de primer nivel a tu servicio</p>
       
       <div class="grid-4">
         <div class="card">
-          <div class="card-img"></div>
-          <div class="rating"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" alt="Doctor Carlos Mendoza" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 10px;">
           <h3>Dr. Carlos Mendoza</h3>
           <p style="color: var(--color-text-muted);">Cardiología</p>
-          <a href="perfil-doctor.html" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">Ver Perfil</a>
+          <p style="color: var(--color-primary-hover); font-weight: 700; margin: 5px 0;">S/ 150.00</p>
+          <a href="perfil-doctor.html?id=doc-1" class="btn btn-secondary" style="margin-top: 10px; width: 100%;">Ver Perfil</a>
         </div>
+
         <div class="card">
-          <div class="card-img"></div>
-          <div class="rating"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+          <img src="https://images.unsplash.com/photo-1594824813576-652a65d56220?auto=format&fit=crop&w=400&q=80" alt="Dra. Ana Torres" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 10px;">
           <h3>Dra. Ana Torres</h3>
           <p style="color: var(--color-text-muted);">Pediatría</p>
-          <a href="perfil-doctor.html" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">Ver Perfil</a>
+          <p style="color: var(--color-primary-hover); font-weight: 700; margin: 5px 0;">S/ 120.00</p>
+          <a href="perfil-doctor.html?id=doc-2" class="btn btn-secondary" style="margin-top: 10px; width: 100%;">Ver Perfil</a>
         </div>
+
         <div class="card">
-          <div class="card-img"></div>
-          <div class="rating"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80" alt="Dr. Mario Ramírez" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 10px;">
+          <h3>Dr. Mario Ramírez</h3>
+          <p style="color: var(--color-text-muted);">Cirugía Torácica</p>
+          <p style="color: var(--color-primary-hover); font-weight: 700; margin: 5px 0;">S/ 200.00</p>
+          <a href="perfil-doctor.html?id=doc-3" class="btn btn-secondary" style="margin-top: 10px; width: 100%;">Ver Perfil</a>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1527613426441-2da1747cb7c6?auto=format&fit=crop&w=400&q=80" alt="Dr. Roberto Silva" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 10px;">
           <h3>Dr. Roberto Silva</h3>
           <p style="color: var(--color-text-muted);">Neurología</p>
-          <a href="perfil-doctor.html" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">Ver Perfil</a>
-        </div>
-        <div class="card">
-          <div class="card-img"></div>
-          <div class="rating"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
-          <h3>Dra. Elena Gómez</h3>
-          <p style="color: var(--color-text-muted);">Dermatología</p>
-          <a href="perfil-doctor.html" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">Ver Perfil</a>
+          <p style="color: var(--color-primary-hover); font-weight: 700; margin: 5px 0;">S/ 180.00</p>
+          <a href="perfil-doctor.html?id=doc-4" class="btn btn-secondary" style="margin-top: 10px; width: 100%;">Ver Perfil</a>
         </div>
       </div>
       <div style="text-align: center; margin-top: 30px;">
@@ -180,23 +226,77 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 WebApp de Salud. Todos los derechos reservados.</p>
+      <p>&copy; 2026 WebApp de Salud MediCare Perú. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- MODAL: RESERVA DE CITA CON CALENDARIO -->
+  <!-- MODAL 1: BIENVENIDA / ENCUESTA ("¡Queremos conocerte!") -->
+  <div class="modal-welcome" id="modal-welcome">
+    <div class="modal-welcome-content">
+      <button class="modal-close" id="btn-close-welcome" style="position: absolute; right: 15px; top: 15px; border: none; background: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+      <h2 style="text-align: center; color: var(--color-text);">¡Queremos conocerte!</h2>
+      <p style="text-align: center; font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 20px;">
+        Son solo 3 preguntas y te tomará menos de un minuto.
+      </p>
+
+      <form id="form-welcome">
+        <div style="margin-bottom: 12px;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">¿Para quién estás buscando atención médica?</label>
+          <select style="width: 100%; padding: 8px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);" required>
+            <option value="">Selecciona una opción</option>
+            <option value="para_mi">Para mí</option>
+            <option value="un_familiar">Para un familiar (hijo, padre/madre)</option>
+            <option value="otra_persona">Para otra persona</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">¿Cuál es el principal motivo de tu visita?</label>
+          <select style="width: 100%; padding: 8px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);" required>
+            <option value="">Selecciona una opción</option>
+            <option value="consulta_general">Consulta o chequeo general</option>
+            <option value="especialista">Buscar un médico especialista</option>
+            <option value="urgencia">Atención urgente o síntoma reciente</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">¿Cuál es tu rango de edad?</label>
+          <select style="width: 100%; padding: 8px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);" required>
+            <option value="">Selecciona tu rango de edad</option>
+            <option value="18-30">18 - 30 años</option>
+            <option value="31-50">31 - 50 años</option>
+            <option value="51+">Más de 50 años</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Respuestas</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: RESERVA DE CITA CON CALENDARIO -->
   <div class="modal-overlay" id="modal-booking">
     <div class="modal-content">
       <button class="modal-close" id="btn-close-booking">&times;</button>
       <h2><i data-lucide="calendar"></i> Reserva tu Cita Médica</h2>
       <p style="margin-bottom: 20px; font-size: 0.9rem; color: var(--color-text-muted);">
-        Selecciona la fecha y hora disponible para agendar tu atención.
+        Selecciona el médico, fecha y hora disponible para agendar tu atención en soles (S/).
       </p>
 
       <form id="form-booking">
+        <div style="margin-bottom: 15px;">
+          <label style="display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 5px;">Especialista</label>
+          <select id="booking-doctor" style="width: 100%; padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);" required>
+            <option value="Dr. Carlos Mendoza - Cardiología (S/ 150.00)">Dr. Carlos Mendoza - Cardiología (S/ 150.00)</option>
+            <option value="Dra. Ana Torres - Pediatría (S/ 120.00)">Dra. Ana Torres - Pediatría (S/ 120.00)</option>
+            <option value="Dr. Mario Ramírez - Cirugía Torácica (S/ 200.00)">Dr. Mario Ramírez - Cirugía Torácica (S/ 200.00)</option>
+            <option value="Dr. Roberto Silva - Neurología (S/ 180.00)">Dr. Roberto Silva - Neurología (S/ 180.00)</option>
+          </select>
+        </div>
+
         <div style="margin-bottom: 15px;">
           <label style="display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 5px;">Fecha de Atención</label>
           <input type="date" id="booking-date" style="width: 100%; padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);" required>
@@ -206,10 +306,10 @@
           <label style="display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 5px;">Hora Disponible</label>
           <select id="booking-time" style="width: 100%; padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);" required>
             <option value="">Selecciona un horario</option>
-            <option value="08:00">08:00 AM</option>
-            <option value="10:00">10:00 AM</option>
-            <option value="14:00">02:00 PM</option>
-            <option value="16:00">04:00 PM</option>
+            <option value="08:00 AM">08:00 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="02:00 PM">02:00 PM</option>
+            <option value="04:00 PM">04:00 PM</option>
           </select>
         </div>
 
@@ -218,7 +318,53 @@
     </div>
   </div>
 
-  <!-- JS LOGIC -->
+  <!-- SCRIPTS -->
+  <script src="js/doctors.js"></script>
   <script src="js/app.js"></script>
+
+  <!-- SCRIPT ESPECÍFICO PARA MODAL DE BIENVENIDA Y BUSCADOR -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mostrar modal de bienvenida automáticamente al cargar index.html
+      const modalWelcome = document.getElementById('modal-welcome');
+      const btnCloseWelcome = document.getElementById('btn-close-welcome');
+      const formWelcome = document.getElementById('form-welcome');
+
+      if (modalWelcome && !sessionStorage.getItem('welcome_survey_done')) {
+        setTimeout(() => {
+          modalWelcome.classList.add('active');
+        }, 600);
+      }
+
+      if (btnCloseWelcome) {
+        btnCloseWelcome.addEventListener('click', () => {
+          modalWelcome.classList.remove('active');
+        });
+      }
+
+      if (formWelcome) {
+        formWelcome.addEventListener('submit', (e) => {
+          e.preventDefault();
+          sessionStorage.setItem('welcome_survey_done', 'true');
+          modalWelcome.classList.remove('active');
+          alert('¡Gracias por tus respuestas! Ahora puedes explorar la plataforma.');
+        });
+      }
+
+      // 2. Funcionalidad del Buscador en la Cabecera
+      const searchForm = document.getElementById('header-search-form');
+      const searchInput = document.getElementById('header-search-input');
+
+      if (searchForm && searchInput) {
+        searchForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const query = searchInput.value.trim();
+          if (query.length > 0) {
+            window.location.href = `doctores.html?search=${encodeURIComponent(query)}`;
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

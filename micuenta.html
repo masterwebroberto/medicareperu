@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Cuenta | Portal del Paciente MediCare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- HEADER NAVEGACIÓN -->
+  <header class="header">
+    <div class="container header-top">
+      <a href="index.html" class="logo">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#00E5D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          <path d="M12 7v6"/>
+          <path d="M9 10h6"/>
+        </svg>
+        <span>MediCare</span>
+      </a>
+
+      <button class="mobile-menu-toggle" id="btn-toggle-menu" aria-label="Abrir Menú">
+        <i data-lucide="menu"></i>
+      </button>
+      
+      <nav id="main-nav">
+        <ul class="nav-links">
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="doctores.html">Personal Médico</a></li>
+          <li><a href="micuenta.html" style="color: var(--color-primary-hover); font-weight: 700;">Mi Cuenta</a></li>
+        </ul>
+      </nav>
+
+      <form class="header-search-form" id="header-search-form">
+        <input type="text" id="header-search-input" placeholder="Busca por médico o especialidad...">
+        <button type="submit" aria-label="Buscar"><i data-lucide="search"></i></button>
+      </form>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-header" id="btn-open-booking">
+          <i data-lucide="calendar"></i>
+          <span>Reserva Cita</span>
+        </button>
+        <button class="btn btn-secondary btn-header" id="btn-logout">
+          <i data-lucide="log-out"></i>
+          <span>Cerrar Sesión</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB & SALUDO PACIENTE -->
+  <div style="background-color: var(--color-bg-alt); padding: 20px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+      <div>
+        <small style="color: var(--color-text-muted);"><a href="index.html">Inicio</a> &gt; Mi Cuenta</small>
+        <h1 style="font-size: 1.8rem; margin-top: 5px;" id="user-welcome-name">¡Hola, Roberto Inga Alvarado!</h1>
+        <p style="color: var(--color-text-muted); font-size: 0.9rem;">Bienvenido a tu historial clínico y gestión de consultas médicas.</p>
+      </div>
+      <div>
+        <span style="background: #e6f9f6; color: #008778; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">
+          <i data-lucide="shield-check" style="width: 16px; height: 16px; display: inline; vertical-align: middle;"></i> Paciente Verificado
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL DE SECCIONES CON PESTAÑAS (TABS) -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- MENU DE PESTAÑAS DEL DASHBOARD -->
+      <div style="display: flex; gap: 10px; border-bottom: 2px solid var(--color-border); margin-bottom: 30px; overflow-x: auto; padding-bottom: 5px;">
+        <button class="tab-btn active" id="tab-citas" style="white-space: nowrap; font-size: 0.9rem;">
+          <i data-lucide="calendar" style="width: 16px; height: 16px; display: inline;"></i> Citas Programadas
+        </button>
+        <button class="tab-btn" id="tab-atenciones" style="white-space: nowrap; font-size: 0.9rem;">
+          <i data-lucide="clock" style="width: 16px; height: 16px; display: inline;"></i> Atenciones Realizadas
+        </button>
+        <button class="tab-btn" id="tab-recetas" style="white-space: nowrap; font-size: 0.9rem;">
+          <i data-lucide="file-text" style="width: 16px; height: 16px; display: inline;"></i> Recetas Médicas
+        </button>
+        <button class="tab-btn" id="tab-examenes" style="white-space: nowrap; font-size: 0.9rem;">
+          <i data-lucide="activity" style="width: 16px; height: 16px; display: inline;"></i> Exámenes Auxiliares
+        </button>
+      </div>
+
+      <!-- CONTENIDO 1: CITAS PROGRAMADAS -->
+      <div class="account-section active" id="sec-citas">
+        <div id="appointments-container">
+          <!-- Renderizado dinámico desde JS -->
+        </div>
+      </div>
+
+      <!-- CONTENIDO 2: ATENCIONES REALIZADAS -->
+      <div class="account-section" id="sec-atenciones" style="display: none;">
+        <h3 style="margin-bottom: 20px;">Historial de Consultas Atendidas</h3>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div class="card" style="text-align: left; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div>
+              <span style="background: #f1f5f9; color: #475569; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">ATEN-2026-041</span>
+              <h4 style="margin-top: 6px;">Dr. Carlos Mendoza — Cardiología</h4>
+              <p style="color: var(--color-text-muted); font-size: 0.85rem; margin-top: 4px;">Atención Presencial — Sede Central Lima</p>
+              <small style="color: var(--color-text-muted);">Atendido el: 15 de Febrero, 2026 - 10:00 AM</small>
+            </div>
+            <span style="background: #e2e8f0; color: #334155; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Atención Finalizada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENIDO 3: RECETAS MÉRICAS -->
+      <div class="account-section" id="sec-recetas" style="display: none;">
+        <h3 style="margin-bottom: 20px;">Recetas Médicas Emitidas</h3>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div class="card" style="text-align: left; padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-border); padding-bottom: 10px; margin-bottom: 10px;">
+              <strong>Receta #REC-2026-902</strong>
+              <small style="color: var(--color-text-muted);">Dr. Carlos Mendoza — Cardiología</small>
+            </div>
+            <ul style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 15px;">
+              <li>• <strong>Enalapril 10mg:</strong> Tomar 1 tableta cada 12 horas por 30 días.</li>
+              <li>• <strong>Aspirina 100mg:</strong> Tomar 1 tableta después del almuerzo.</li>
+            </ul>
+            <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 12px;" onclick="alert('Descargando archivo PDF [DEMO]...')">
+              <i data-lucide="download" style="width: 14px; height: 14px; display: inline;"></i> Descargar Receta (PDF)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENIDO 4: EXÁMENES AUXILIARES -->
+      <div class="account-section" id="sec-examenes" style="display: none;">
+        <h3 style="margin-bottom: 20px;">Exámenes Auxiliares Indicados</h3>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div class="card" style="text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <h4>Electrocardiograma de Reposo + Perfil Lipídico</h4>
+              <span style="background: #fef3c7; color: #92400e; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">Sugerido</span>
+            </div>
+            <p style="color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 10px;">Indicado por: Dr. Carlos Mendoza (Cardiología)</p>
+            <small style="display: block; color: var(--color-text-muted); margin-bottom: 12px;">Fecha de orden: 15/02/2026</small>
+            <button class="btn btn-primary" style="font-size: 0.8rem; padding: 6px 12px;" onclick="alert('Agendando toma de exámenes [DEMO]...')">
+              <i data-lucide="file-plus" style="width: 14px; height: 14px; display: inline;"></i> Agendar Examen en Laboratorio
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container"><p>&copy; 2026 WebApp de Salud MediCare Perú. Todos los derechos reservados.</p></div>
+  </footer>
+
+  <script src="js/doctors.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
