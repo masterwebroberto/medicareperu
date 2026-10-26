@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://masterwebroberto.github.io/medicareperu/</loc>
-  </url>
-  <url>
     <loc>https://masterwebroberto.github.io/medicareperu/index.html</loc>
-  </url>
-  <url>
-    <loc>https://masterwebroberto.github.io/medicareperu/doctores.html</loc>
-  </url>
-  <url>
-    <loc>https://masterwebroberto.github.io/medicareperu/especialidades.html</loc>
-  </url>
-  <url>
-    <loc>https://masterwebroberto.github.io/medicareperu/servicios.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
 </urlset>
